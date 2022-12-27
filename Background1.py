@@ -1,6 +1,3 @@
-print("="*50)
-print("Now Loading...")
-print("="*50)
 import pygame
 
 WHITE = (255, 255, 255)
@@ -27,10 +24,16 @@ def initGame():
     global gamepad, clock
 
     pygame.init()
-    gamepad = pygame.display.set_mod((pad_width, pad_height))
+    gamepad = pygame.display.set_mode((pad_width, pad_height))
     pygame.display.set_caption('PyFlying')
 
     clock = pygame.time.Clock()
     runGame()
 
-initGame()
+
+if __name__ == '__main__':
+    print("="*50)
+    print("Now Loading...")
+    print("="*50)
+
+    initGame()
